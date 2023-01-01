@@ -11,7 +11,7 @@ app.get('/abc', (req, res) => {
     console.log("Request ip: ",req.ip);
   res.send('Hello World!')
 })
-const __dirname = path.resolve()
+  const __dirname = path.resolve()
 
 app.use('/', express.static(path.join(__dirname,'./web/build')))
 
