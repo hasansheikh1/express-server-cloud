@@ -13,6 +13,9 @@ app.get('/abc', (req, res) => {
 })
 const __dirname = path.resolve()
 
+app.get('/gettime', (req,res)=>{
+  console.log("request ip: ",req.ip );
+})
 app.use('/', express.static(path.join(__dirname,'./web/build')))
 
 app.use('*', express.static(path.join(__dirname,'./web/build/index.html')))
